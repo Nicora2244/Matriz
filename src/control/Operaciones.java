@@ -11,7 +11,14 @@ package control;
  */
 public class Operaciones {
     
-    // Método para la traslación
+    /**
+     * Método para generar una matriz de traslación.
+     * 
+     * @param x Traslación en el eje X.
+     * @param y Traslación en el eje Y.
+     * @param z Traslación en el eje Z.
+     * @return Matriz de traslación 4x4.
+     */
     public static double[][] traslacion(double x, double y, double z) {
         double[][] matriz = new double[4][4];
 
@@ -23,7 +30,12 @@ public class Operaciones {
         return matriz;
     }
 
-    // Método para la rotación en X
+     /**
+     * Método para generar una matriz de rotación alrededor del eje X.
+     * 
+     * @param angulo Ángulo de rotación en grados.
+     * @return Matriz de rotación 4x4.
+     */
     public static double[][] rotacionX(double angulo) {
         double[][] matriz = new double[4][4];
 
@@ -39,7 +51,12 @@ public class Operaciones {
         return matriz;
     }
 
-    // Método para la rotación en Y
+    /**
+     * Método para generar una matriz de rotación alrededor del eje Y.
+     * 
+     * @param angulo Ángulo de rotación en grados.
+     * @return Matriz de rotación 4x4.
+     */
     public static double[][] rotacionY(double angulo) {
         double[][] matriz = new double[4][4];
 
@@ -55,7 +72,12 @@ public class Operaciones {
         return matriz;
     }
 
-    // Método para la rotación en Z
+    /**
+     * Método para generar una matriz de rotación alrededor del eje Z.
+     * 
+     * @param angulo Ángulo de rotación en grados.
+     * @return Matriz de rotación 4x4.
+     */
     public static double[][] rotacionZ(double angulo) {
         double[][] matriz = new double[4][4];
 
@@ -71,7 +93,14 @@ public class Operaciones {
         return matriz;
     }
 
-    // Método para la escala
+    /**
+     * Método para generar una matriz de escala.
+     * 
+     * @param x Factor de escala en el eje X.
+     * @param y Factor de escala en el eje Y.
+     * @param z Factor de escala en el eje Z.
+     * @return Matriz de escala 4x4.
+     */
     public static double[][] escala(double x, double y, double z) {
         double[][] matriz = new double[4][4];
 
@@ -82,24 +111,4 @@ public class Operaciones {
 
         return matriz;
     }
-
-    // Método para la multiplicación de matrices
-    public static double[][] multiplicacionMatrices(double[][] matriz1, double[][] matriz2) {
-        double[][] matrizResultado = new double[4][4];
-
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                matrizResultado[i][j] = 0;
-                for (int k = 0; k < 4; k++) {
-                    matrizResultado[i][j] += matriz1[i][k] * matriz2[k][j];
-                }
-            }
-        }
-
-        return matrizResultado;
-    }
-    
-    public void imprimirMatriz(double[][] matriz) {
-    
-}
 }

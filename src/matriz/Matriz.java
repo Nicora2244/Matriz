@@ -18,7 +18,10 @@ import static control.Operaciones.traslacion;
 public class Matriz {
 
     /**
-     * @param args the command line arguments
+     * Método principal que se utiliza para probar las operaciones de matrices.
+     * Se crean matrices de traslación, rotación (en los ejes X, Y y Z) y escala,
+     * y luego se imprimen en la consola.
+     * @param args
      */
     public static void main(String[] args) {
         double[][] matrizTranslacion = traslacion(3, 4, 5);
@@ -36,7 +39,13 @@ public class Matriz {
         double[][] matrizEscala = escala(2, 3, 4);
         imprimirMatriz(matrizEscala);
     }
-
+    
+    /**
+     * Método para imprimir una matriz en la consola.
+     * Recorre cada fila y columna de la matriz y muestra sus valores.
+     *
+     * @param matriz Matriz de tipo double a imprimir.
+     */
     private static void imprimirMatriz(double[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
         for (int j = 0; j < matriz[i].length; j++) {
@@ -45,6 +54,4 @@ public class Matriz {
         System.out.println();
     }
     }
-    
-    
 }
